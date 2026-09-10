@@ -29,10 +29,10 @@ A solução foi desenvolvida como uma prova de conceito para monitorar a tempera
   - [Identificação dos fios](#Identificação-dos-fios)
   - [Resumo das conexões](#Resumo-das-conexões)
   - [Montagem na protoboard](#Montagem-na-protoboard)
-    - [1. Conexão do aterramento](#1.-Conexão-do-aterramento)
-    - [2. Conexão da alimentação](#2.-Conexão-da-alimentação)
-    - [3. Conexão do sinal de dados](#3.-Conexão-do-sinal-de-dados)
-    - [4. Instalação do resistor](#4.-Instalação-do-resistor)
+    - [1. Conexão do aterramento](#1-conexão-do-aterramento)
+    - [2. Conexão da alimentação](#2-Conexão-da-alimentação)
+    - [3. Conexão do sinal de dados](#3-Conexão-do-sinal-de-dados)
+    - [4. Instalação do resistor](#4-Instalação-do-resistor)
   - [Diagrama simplificado](#Diagrama-simplificado)
 - [Ativação da interface 1-Wire](#Ativação-da-interface-1-Wire)
 - [Verificação do sensor](#Verificação-do-sensor)
@@ -249,13 +249,16 @@ Resultado esperado:
 teste/temperatura 25.8
 ```
 
+aviso sobre desligar o dispositivo para montar toda a fiação
 ## Montagem do sensor DS18B20
 
 //
 
 (imagem)
+![Componentes](./assets/Componentes.png)
 
 //
++++ informações para adicionar outro sensor
 
 ### Componentes utilizados
 
@@ -281,6 +284,12 @@ Na montagem realizada, os fios do sensor DS18B20 possuem as seguintes funções:
 > [!WARNING] As cores dos fios podem variar conforme o fabricante do sensor.
 > Verifique a identificação dos fios antes de conectar a alimentação.
 
+//
+
+(imagem dos cabos Jumper macho-femea)
+
+//
+
 ### Resumo das conexões
 
 | Componente | Função | Conexão no Raspberry Pi |
@@ -296,17 +305,29 @@ Os fios preto, vermelho e amarelo do sensor devem ser inseridos em trilhas elét
 
 Os furos pertencentes à mesma trilha são eletricamente conectados. Por isso, os componentes não precisam ocupar exatamente os mesmos furos mostrados na imagem, mas precisam compartilhar as trilhas corretas.
 
+//
+
+(imagem mostrando a trilha eletrica)
+
+//
+
 #### 1. Conexão do aterramento
 
 1. Insira o **fio preto do sensor** em uma trilha da protoboard;
 2. Insira o **jumper preto** em outro furo da mesma trilha;
 3. Conecte a extremidade fêmea do jumper a um pino **GND** do Raspberry Pi.
 
+(imagem colocando o fio responsavel pelo aterramento (GND))
+![GND](./assets/GND.png)
+
 #### 2. Conexão da alimentação
 
 1. Insira o **fio vermelho do sensor** em outra trilha da protoboard;
 2. Insira o **jumper vermelho** em outro furo da mesma trilha;
 3. Conecte a extremidade fêmea do jumper ao pino de **3,3 V** do Raspberry Pi.
+
+(imagem colocando o fio responsavel pela alimentação (VDD))
+![VDD](./assets/VDD.png)
 
 #### 3. Conexão do sinal de dados
 
@@ -316,6 +337,8 @@ Os furos pertencentes à mesma trilha são eletricamente conectados. Por isso, o
 
 O GPIO 4 será utilizado pela interface 1-Wire para receber os dados de temperatura enviados pelo sensor.
 
+![GPIO4](./assets/GPIO4.png)
+
 #### 4. Instalação do resistor
 
 Instale o resistor de **4,7 kΩ** entre as trilhas dos fios vermelho e amarelo:
@@ -324,6 +347,8 @@ Instale o resistor de **4,7 kΩ** entre as trilhas dos fios vermelho e amarelo:
 2. Conecte a outra extremidade à mesma trilha do **fio amarelo**, ligada ao GPIO 4.
 
 O resistor funciona como um resistor de **pull-up**, mantendo a linha de dados em um nível lógico estável para a comunicação entre o sensor e o Raspberry Pi.
+
+![Circuito-pronto](./assets/Circuito%20pronto.png)
 
 ### Diagrama simplificado
 
