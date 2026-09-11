@@ -252,13 +252,9 @@ teste/temperatura 25.8
 aviso sobre desligar o dispositivo para montar toda a fiação
 ## Montagem do sensor DS18B20
 
-//
-
-(imagem)
 ![Componentes](./assets/Componentes.png)
 
-//
-+++ informações para adicionar outro sensor
+- [Utilização de mais de um sensor](#Utilização-de-mais-de-um-sensor)
 
 ### Componentes utilizados
 
@@ -284,11 +280,7 @@ Na montagem realizada, os fios do sensor DS18B20 possuem as seguintes funções:
 > [!WARNING] As cores dos fios podem variar conforme o fabricante do sensor.
 > Verifique a identificação dos fios antes de conectar a alimentação.
 
-//
-
-(imagem dos cabos Jumper macho-femea)
-
-//
+![Cabo Jumper macho femea](./assets/40_jumper_macho_x_fmea_20_cm_dupont_anncio_para_1_20250820162040_7d7f61dc1afd.webp)
 
 ### Resumo das conexões
 
@@ -738,6 +730,8 @@ mosquitto_sub \
 O caractere `#` permite receber todos os tópicos existentes abaixo de `temperatura/`.
 
 ## Utilização de mais de um sensor
+
+![mais um sensor](./assets/mais%20de%20um%20sensor.png)
 
 O DS18B20 utiliza o barramento 1-Wire e cada sensor possui um identificador individual. Por isso, mais de um sensor pode compartilhar as mesmas conexões:
 
