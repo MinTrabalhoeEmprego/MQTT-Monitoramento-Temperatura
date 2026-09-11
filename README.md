@@ -280,7 +280,7 @@ Na montagem realizada, os fios do sensor DS18B20 possuem as seguintes funções:
 > [!WARNING] As cores dos fios podem variar conforme o fabricante do sensor.
 > Verifique a identificação dos fios antes de conectar a alimentação.
 
-![Cabo Jumper macho femea](./assets/40_jumper_macho_x_fmea_20_cm_dupont_anncio_para_1_20250820162040_7d7f61dc1afd.webp)
+![Cabo Jumper macho femea](./assets/cabos%20jumper%20macho%20femea.png)
 
 ### Resumo das conexões
 
@@ -297,11 +297,9 @@ Os fios preto, vermelho e amarelo do sensor devem ser inseridos em trilhas elét
 
 Os furos pertencentes à mesma trilha são eletricamente conectados. Por isso, os componentes não precisam ocupar exatamente os mesmos furos mostrados na imagem, mas precisam compartilhar as trilhas corretas.
 
-//
+![trilha eletrica](./assets/trilha%20eletrica.png)
 
-(imagem mostrando a trilha eletrica)
-
-//
+![protoboard](./assets/protoboard.png)
 
 #### 1. Conexão do aterramento
 
