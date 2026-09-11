@@ -1,9 +1,5 @@
 # Monitoramento de Temperatura com Raspberry Pi e MQTT
-//
-
-(imagens)
-
-//
+![todos os componentes do monitoramento de temperatura com o raspberry pi](./assets/todos%20os%20componentes%20para%20o%20monitoramento%20de%20temperatura.png)
 
 Projeto de monitoramento de temperatura utilizando Raspberry Pi, sensores DS18B20 e o protocolo MQTT.
 
