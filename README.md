@@ -91,11 +91,11 @@ Zabbix, dashboard ou outro cliente
 ## Tecnologias utilizadas
 
 - Raspberry Pi OS;
-- Python 3;
+- Python **v3.14.8** ***(ultima versão)***;
 - MQTT;
-- Eclipse Mosquitto;O projeto cobre a coleta e o transporte das leituras de temperatura via MQTT. Recursos como autenticação, criptografia, alertas e persistência
+- Eclipse Mosquitto;O projeto cobre a coleta e o transporte das leituras de temperatura via MQTT.
 - Eclipse Paho MQTT;
-- Biblioteca w1thermsensor;
+- Biblioteca w1thermsensor **v2.3.0** ***(ultima versão)***;
 - Sensor DS18B20;
 - Protocolo 1-Wire.
 
